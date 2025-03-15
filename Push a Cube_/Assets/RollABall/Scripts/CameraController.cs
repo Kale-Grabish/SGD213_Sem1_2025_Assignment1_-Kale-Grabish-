@@ -13,7 +13,6 @@ public class CameraController : MonoBehaviour {
 		// Create an offset by subtracting the Camera's position from the player's position
 		offset = transform.position - player.transform.position;
 	}
-    void Update()
-	{ }
+    
     // After the standard 'Update()' loop runs, and just before each frame is rendered..
     void LateUpdate (){transform.position = player.transform.position + offset;}}
