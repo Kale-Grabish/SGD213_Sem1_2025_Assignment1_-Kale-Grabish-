@@ -44,10 +44,13 @@ if (other.gameObject.CompareTag ("Pick Up"))
 	}
     void SetCountText()
 {NumTotal.text = "Count: " + inttotalcount.ToString ();
-		if (inttotalcount >= 12) 
-{
+		if (inttotalcount >= 12)
+		{
 			// Set the text value of our 'winText'
-			wintext.text = "You Win!";
-}
-}
+			wintext.text = "You Win. Wonderful Job Young Cube, Now Bask in the Spoils of Victory";
+
+            AudioSource sound = gameObject.GetComponent<AudioSource>();
+            sound.Play();
+        }
+    }
 }
